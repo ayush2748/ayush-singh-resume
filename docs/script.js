@@ -1,24 +1,24 @@
 (() => {
-  const menuButton = document.querySelector(".menu-toggle");
-  const navigation = document.querySelector("#primary-nav");
+  const button = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('#primary-nav');
 
-  if (menuButton && navigation) {
-    menuButton.addEventListener("click", () => {
-      const isOpen = menuButton.getAttribute("aria-expanded") === "true";
-      menuButton.setAttribute("aria-expanded", String(!isOpen));
-      menuButton.setAttribute("aria-label", isOpen ? "Open navigation" : "Close navigation");
-      navigation.classList.toggle("is-open", !isOpen);
+  if (button && nav) {
+    const closeMenu = () => {
+      button.setAttribute('aria-expanded', 'false');
+      button.setAttribute('aria-label', 'Open navigation');
+      nav.classList.remove('is-open');
+    };
+
+    button.addEventListener('click', () => {
+      const open = button.getAttribute('aria-expanded') === 'true';
+      button.setAttribute('aria-expanded', String(!open));
+      button.setAttribute('aria-label', open ? 'Open navigation' : 'Close navigation');
+      nav.classList.toggle('is-open', !open);
     });
 
-    navigation.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        menuButton.setAttribute("aria-expanded", "false");
-        menuButton.setAttribute("aria-label", "Open navigation");
-        navigation.classList.remove("is-open");
-      });
+    nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') closeMenu();
     });
   }
-
-  const year = document.querySelector("#current-year");
-  if (year) year.textContent = String(new Date().getFullYear());
 })();

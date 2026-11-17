@@ -1,28 +1,28 @@
-# Ayush Singh - Maritime Resume Website
+# Ayush Kumar Singh — Business, Operations & Maritime Portfolio
 
-A responsive, single-page resume and portfolio website built for the CSS module assignment.
+A responsive personal portfolio and resume website built with semantic HTML, custom CSS and a small JavaScript file.
 
 ## Live website
 https://ayush2748.github.io/ayush-singh-resume/
 
-## Repository structure
-- `docs/index.html` - semantic page structure and resume content
-- `docs/styles.css` - colour palette, typography, layouts, cards, timeline and responsive styling
-- `docs/script.js` - accessible mobile navigation and automatic footer year
-- `docs/assets/favicon.svg` - custom initials favicon
-- `.github/workflows/pages.yml` - automated GitHub Pages deployment workflow
+## Repository
+https://github.com/ayush2748/ayush-singh-resume
+
+## Structure
+- \`docs/index.html\` — profile, experience, education, competencies, interests and contact details
+- \`docs/styles.css\` — design system, responsive layouts, typography, cards, timeline and accessibility states
+- \`docs/script.js\` — accessible mobile navigation
+- \`docs/assets/favicon.svg\` — custom monogram favicon
+- \`.github/workflows/pages.yml\` — GitHub Pages deployment workflow
 
 ## Run locally
-Open `docs/index.html` in a browser. No build tools or package installation are required.
+Open \`docs/index.html\` in a browser. No build tools or package installation are required.
 
-## Publish with GitHub Pages
-1. Open **Settings -> Pages** in this repository.
-2. Under **Build and deployment**, set **Source** to **GitHub Actions**.
-3. The workflow in `.github/workflows/pages.yml` deploys the contents of `docs/` whenever code is pushed to `main`, or when manually started from the Actions tab.
-4. After the workflow succeeds, visit the live website link above.
+## Deployment
+The site is published with GitHub Pages using GitHub Actions. Pushes to \`main\` trigger the deployment workflow. The workflow publishes the \`docs/\` directory.
 
-## Design decisions
-The website uses a restrained maritime palette: deep navy, sea green, soft mint, warm ivory and a small orange accent. DM Sans is used for body copy and Playfair Display for headings. Flexbox aligns the navigation and utility rows; CSS Grid structures the hero, highlights, experience, education and skills. Element, class and ID selectors organise the styling. Responsive breakpoints adapt the layout for mobile, with keyboard focus, a skip link and reduced-motion support.
+## Design direction
+The portfolio presents a multidisciplinary profile across entrepreneurship, business growth and maritime operations. A dark ink/navy base, warm neutral background, muted teal and restrained orange create a professional but distinctive identity. Manrope and DM Sans support interface clarity, while Playfair Display adds editorial contrast to major headings. CSS Grid and Flexbox organise the layout; custom properties provide a reusable design system; breakpoints adapt the experience for smaller screens.
 
-## Accuracy note
-The portfolio uses the education and sea-service details supplied for this assignment. Verify credential names and validity against original documents before using the site as a formal employment CV.
+## Content accuracy
+The content reflects the details supplied in Ayush Kumar Singh's resume. Role titles, dates, locations, qualifications, skills and interests are kept as stated. The website does not add revenue figures, business outcomes, certifications or achievements beyond those supplied.
